@@ -61,31 +61,3 @@ We cite the following works:
 * Carcillo, Fabrizio; Dal Pozzolo, Andrea; Le Borgne, Yann-Aël; Caelen, Olivier; Mazzer, Yannis; Bontempi, Gianluca. Scarff: a scalable framework for streaming credit card fraud detection with Spark, Information fusion,41, 182-194,2018,Elsevier
 * Carcillo, Fabrizio; Le Borgne, Yann-Aël; Caelen, Olivier; Bontempi, Gianluca. Streaming active learning strategies for real-life credit card fraud detection: assessment and visualization, International Journal of Data Science and Analytics, 5,4,285-300,2018,Springer International Publishing
 
-
-## Contents
-
-* `deployment/`
-  * `fraud-detection-using-machine-learning.yaml`: Creates AWS CloudFormation Stack for solution
-* `source/`
-  * `lambda`
-    * `model-invocation/`
-      * `index.py`: Lambda function script for invoking SageMaker endpoints for inference
-  * `notebooks/`
-    * `src`
-      * `package`
-        * `config.py`: Read in the environment variables set during the Amazon CloudFormation stack creation
-        * `generate_endpoint_traffic.py`: Custom script to show how to send transaction traffic to REST API for inference
-        * `util.py`: Helper function and utilities
-    * `sagemaker_fraud_detection.ipynb`: Orchestrates the solution. Trains the models and deploys the trained model
-    * `endpoint_demo.ipynb`: A small notebook that demonstrates how one can use the solution's endpoint to make prediction.
-  * `scripts/`
-    * `set_kernelspec.py`: Used to update the kernelspec name at deployment.
-  * `test/`
-    * Files that are used to automatically test the solution
-
-
-## License
-
-This project is licensed under the Apache-2.0 License.
-
-
